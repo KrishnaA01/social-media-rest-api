@@ -38,6 +38,7 @@ router.post("/register",  async (req,res)=> {
         !validPassword && res.status(400).json("wrong password");
 
         res.status(200).json(user);
+        console.log(`${user.username} is signed in`);
 
     } catch(err){
         res.status(500).json(err);
